@@ -1,0 +1,242 @@
+*{
+  box-sizing: border-box;
+}
+
+
+body{
+  background: white;
+  margin:0;
+  font-family: sans-serif;
+}
+
+.conatiner-fluid{
+  width:100%;
+}
+
+.container{
+  max-width: 1140px;
+  margin:0 auto;
+  /* ירש את הגובה מהתגית אבא שלו */
+  min-height: inherit;
+}
+
+header{
+  min-height: 80px;
+  background: rgba(255, 255, 255, 0.557);
+  position:sticky;
+  width: 100%;
+  top:0;
+}
+
+header .container{
+  display: flex;
+  align-items: center;
+  /* border: 1px solid grey; */
+}
+
+header .logo{
+  width:25%;
+}
+
+header .logo img{
+  width:100%;
+}
+
+header .nav_search {
+  display: flex;
+  width: 75%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .nav_search ul{
+  list-style-type: none;
+  padding:0;
+}
+
+header .nav_search ul li{
+  display: inline-block;
+}
+
+header .nav_search ul li a{
+  color:grey;
+  text-decoration: none;
+  padding:0 8px;
+}
+
+header .nav_search ul li a:hover{
+  color:skyblue;
+}
+
+header .nav_search .search{
+  border:grey 1px solid;
+  padding:8px;
+  border-radius: 8px;
+}
+
+header .nav_search .search input{
+  border:none;
+  outline: none;
+}
+
+header .nav_search .search button{
+  border:none;
+  background: transparent;
+}
+
+.strip{
+  min-height: 300px;
+  background: purple;
+  background-image: url(images/strip.png);
+  background-position: center center;
+}
+
+.strip .container{
+  display: flex;
+  align-items: flex-end;
+  color:white;
+  font-size: 2em;
+}
+
+.strip h1{
+  text-shadow: 4px 3px 0 #3b3b3b;
+  margin-bottom: 16px;
+}
+
+main{
+  min-height: 300px;
+  background: #eee;
+}
+
+main .container{
+  padding:48px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+main .box{
+  border:1px solid grey;
+  width:23%;
+  text-align: center;
+  padding-bottom: 24px;
+  background: white;
+}
+
+main .box h3{
+  background: rgb(84,173,215);
+  border-bottom: 4px solid rgb(46, 99, 124);
+  color:white;
+  padding:12px;
+  margin:0;
+}
+
+main .box img{
+  margin-top: 16px;
+}
+
+main .box p{
+  font-size: 0.8em;
+  padding:8px;
+}
+
+main .box a{
+  color:rgb(84,173,215);
+  text-decoration: none;
+}
+
+footer{
+  min-height: 200px;
+  background: rgb(2, 2, 63);
+}
+
+footer .container{
+  padding:48px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color:white;
+}
+
+footer .box_footer{
+  width:24%;
+  /* border:1px solid silver; */
+}
+
+footer .box_footer h4{
+  background: grey;
+  color:white;
+  padding:8px;
+  margin:0;
+}
+
+footer .box_footer a{
+  color:grey;
+  text-decoration: none;
+  margin-top:4px;
+  font-size: 0.8em;
+}
+
+footer .box3{
+  text-align: center;
+  color:grey;
+  
+}
+
+footer .box3 .box_div{
+  font-size: 0.8em;
+}
+
+
+
+footer .box3 h4{
+  margin-bottom: 16px;
+}
+
+/* טאבלטים הרזולציה שלהם עד 991 פיקסלים */
+@media (max-width:991px){
+  
+
+  header .nav_search{
+    display: none;
+  }
+
+  main{
+    padding:8px;
+  }
+
+  main .box{
+    width:49%;
+    margin-bottom: 16px;
+  }
+
+  .strip h1{
+    font-size: 1em;
+    text-align: center;
+    padding:8px;
+  }
+
+  footer{
+    padding:8px;
+  }
+
+  footer .box_footer{
+    width:49%;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width:768px){
+  header .logo{
+    width:60%;
+  }
+
+
+  main .box{
+    width:100%;
+  }
+
+  footer .box_footer{
+    width:100%;
+  }
+}
